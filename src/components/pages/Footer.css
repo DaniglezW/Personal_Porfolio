@@ -1,0 +1,16 @@
+.footer-container {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-right: 15%;
+}
+
+.footer-container a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

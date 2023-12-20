@@ -1,0 +1,86 @@
+.body-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    box-sizing: border-box;
+    color: white;
+    margin-bottom: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 40px;
+}
+
+.name {
+    display: flex;
+    justify-content: flex-start;
+    color: rgb(190, 187, 187);
+    font-size: 1.5rem;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 20%;
+    margin-top: 4%;
+}
+
+.icon-developer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 55%;
+}
+
+.hover {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.hover p {
+    margin: 0;
+    font-size: 70px;
+}
+
+.hover p::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 12.5%;
+    right: 0;
+    width: 100%;
+    height: 75%;
+    background-color: cyan;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hover:hover p::before {
+    transform: scaleX(1);
+}
+
+.category hr {
+    width: 100%;
+    border: 3px solid white;    
+    margin-left: 4%;
+}
+
+.body-content {
+    
+}

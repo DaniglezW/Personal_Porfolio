@@ -1,0 +1,130 @@
+.header-container {
+    width: 15%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    color: white;
+}
+
+.responsive-header-container {
+    padding: 20px;
+}
+
+.logo-container {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.logo-link {
+    width: 35px;
+    height: 35px;
+    background: no-repeat;
+}
+
+.logo-link:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.logo-header {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+    height: 80%;
+}
+
+.parts {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotated-parts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg) translate3d(0, -50%, 0);
+    margin-left: 20px;
+}
+
+.rotated-parts div {
+    margin-right: 17.5px;
+    margin-left: 17.5px;
+}
+
+.links {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+/*
+    Responsive header
+*/
+
+.responsive-menu {
+    position: fixed;
+    color: white;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(rgba(35, 35, 35, 0.492),
+            rgba(70, 70, 70, 0.492));
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    z-index: 600;
+    transition: transform 0.8s;
+}
+
+/*
+    Words Animation
+*/
+
+.hover-effect {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-effect span::before {
+    content: '';
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: cyan;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect span:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}

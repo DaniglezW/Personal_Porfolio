@@ -1,0 +1,32 @@
+ /    / \
+/    /   \
+\   /    /
+ \ /    /
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+_______________________________________________________________________________
+
+DESIGNER
+
+Daniel González
+Hand crafted design & web development
+
+Design tools:
+Figma
+Blender
+
+https://github.com/DaniglezW
+
+_______________________________________________________________________________
+
+TECHNOLOGIES
+
+React
+
+_______________________________________________________________________________
+
+FONTS
+
+Gotham
+Hiragino Kaku Gothic

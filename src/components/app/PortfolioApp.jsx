@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import BodyLayout from '../layout/BodyLayout'
 import Body from '../pages/Body'
 import { Constants } from '../../utils/Constants'
+import ScrollToTop from 'react-scroll-to-top'
 
 const PortfolioApp = () => {
 
-    console.log(Constants.BANNER);
-    console.log(Constants.NAME_APP + ", Port : " + Constants.PORT);
+    let times = 0
+    useEffect(() => {
+        const logInfo = () => {
+            console.log(Constants.BANNER);
+            console.log(Constants.NAME_APP);
+            times++;
+        }
+        times === 0 && logInfo();
+    })
 
     return (
         <>
@@ -16,6 +24,7 @@ const PortfolioApp = () => {
                     <Route path='/' element={<Body />} />
                 </Route>
             </Routes>
+            <ScrollToTop smooth />
         </>
     )
 }

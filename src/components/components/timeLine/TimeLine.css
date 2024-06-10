@@ -1,0 +1,9 @@
+.salesianos-text h3, p{
+    display: flex;
+    text-align: start;
+}
+
+.img-timeline {
+    height: auto;
+    width: auto;
+}

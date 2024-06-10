@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { Constants } from '../../utils/Constants'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/LetterD.png'
 import LogoInsta from '../../assets/instagram.png'
 import LogoLinkedin from '../../assets/linkedin.png'
 import LogoGithub from '../../assets/github.png'
@@ -18,8 +18,8 @@ const Header = () => {
                 <div className='parts'>
                     <div className='rotated-parts'>
                         <div className='hover-effect'><span>Contact</span></div>
-                        <div className='hover-effect'><span>Projects</span></div>
                         <div className='hover-effect'><span>Tecnologies</span></div>
+                        <div className='hover-effect'><span>Experience</span></div>
                         <div className='hover-effect'><span>Details</span></div>
                     </div>
                 </div>

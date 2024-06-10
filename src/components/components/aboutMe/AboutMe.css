@@ -1,0 +1,6 @@
+.container-about-me {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    text-align: justify;
+}

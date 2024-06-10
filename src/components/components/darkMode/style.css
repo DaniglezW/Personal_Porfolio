@@ -1,0 +1,14 @@
+.darkmode-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.darkmode-switch:hover {
+    background-color: rgb(26, 26, 26);
+}

@@ -15,9 +15,11 @@ code {
 :root {
   --primary-color: #fff;
   --secundary-color: #000;
+  --detailColor: cyan;
 }
 
 [data-theme="dark"] {
   --primary-color: #000;
   --secundary-color: #fff;
+  --detailColor: cyan;
 }

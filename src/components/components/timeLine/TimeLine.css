@@ -6,4 +6,9 @@
 .img-timeline {
     height: auto;
     width: auto;
+    color: rgb(0, 184, 184);
+}
+
+.test {
+  background-color: var(--detailColor);
 }

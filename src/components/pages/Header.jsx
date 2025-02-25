@@ -6,15 +6,16 @@ import LogoInsta from '../../assets/instagram.png'
 import LogoLinkedin from '../../assets/linkedin.png'
 import LogoGithub from '../../assets/github.png'
 import './Header.css'
+import SocialMedia from '../components/socialMedia/SocialMedia'
 
 const Header = () => {
 
     return (
         <div className='header-container'>
             <nav className='navbar'>
-                <div className='logo-container'>
+                {/* <div className='logo-container'>
                     <img src={Logo} className='logo-header' alt='img' />
-                </div>
+                </div> */}
                 <div className='parts'>
                     <div className='rotated-parts'>
                         <div className='hover-effect'><span>Contact</span></div>
@@ -24,17 +25,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className='links'>
-                    <a  className="icono-red-social" href={Constants.LINKS.instagram}>
-                        <img src={LogoInsta} className='logo-link' alt='img' />
-                    </a>
-                    <a  className="icono-red-social" href={Constants.LINKS.linkedin}>
-                        <img src={LogoLinkedin} className='logo-link' alt='img' />
-                    </a>
-                    <a  className="icono-red-social" href={Constants.LINKS.github}>
-                        <img src={LogoGithub} className='logo-link' alt='img' />
-                    </a>
-                </div>
+                <SocialMedia />
             </nav>
         </div>
     )

@@ -10,10 +10,10 @@ const TimeLine = () => {
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
-                    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                    contentStyle={{ background: 'cyan', color: '#000' }}
+                    contentArrowStyle={{ borderRight: '7px solid cyan' }}
                     date="September 2021 - May 2023"
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                    iconStyle={{ background: 'cyan', color: '#000' }}
                     icon={<CodeIcon />}
                 >
                     <div className='salesianos-text'>

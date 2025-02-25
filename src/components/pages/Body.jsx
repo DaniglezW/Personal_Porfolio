@@ -55,8 +55,8 @@ const Body = () => {
                 </div>
             </div>
             <div className="body-content">
-                <AboutMe />
-                {/* <TimeLine /> */}
+                {/* <AboutMe /> */}
+                <TimeLine />
             </div>
         </div>
     );

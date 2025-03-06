@@ -38,7 +38,7 @@ const DarkMode = ({ theme, setTheme, selectedTheme }) => {
         checked={theme}
         onClick={toggleTheme}
         icon={<Moon sx={{ color: 'grey' }} />}
-        checkedIcon={<Sun sx={{ color: 'grey' }} />}
+        checkedIcon={<Sun sx={{ color: '#ffff9b' }} />}
     />
 }
 

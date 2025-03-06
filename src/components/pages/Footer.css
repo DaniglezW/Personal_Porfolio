@@ -1,5 +1,5 @@
 .footer-container {
-    color: #fff;
+    color: var(--secundary-color);
     padding: 20px;
     text-align: center;
 }
@@ -9,7 +9,7 @@
 }
 
 .footer-container a {
-    color: #fff;
+    color: var(--secundary-color);
     text-decoration: none;
     margin: 0 10px;
 }

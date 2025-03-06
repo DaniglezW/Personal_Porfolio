@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import Header from '../pages/Header'
 import { Outlet } from 'react-router-dom'
@@ -18,7 +19,7 @@ const BodyLayout = () => {
 
     return (
         <div className="bodylayout">
-            {!isMobile && <Header />}
+            <Header />
             <div className='all-body-container'>
                 <Outlet />
                 <Footer />

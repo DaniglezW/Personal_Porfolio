@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    background: var(--background-gradient);
 }
 
 .all-body-container {
@@ -9,4 +10,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+  .all-body-container {
+      width: 100%;
+  }
+  .bodylayout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

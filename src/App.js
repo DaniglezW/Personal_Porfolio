@@ -3,6 +3,7 @@ import './App.css';
 import PortfolioApp from './components/app/PortfolioApp';
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter >

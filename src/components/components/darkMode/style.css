@@ -1,14 +1,15 @@
 .darkmode-switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .darkmode-switch:hover {
-    background-color: rgba(26, 26, 26, 0.214);
+    background-color: var(--hover-dm-btn-color);
 }

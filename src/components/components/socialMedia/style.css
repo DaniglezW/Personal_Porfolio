@@ -104,5 +104,14 @@ ul {
 
 .example-2 .icon-content a[data-social="youtube"] .filled,
 .example-2 .icon-content a[data-social="youtube"]~.tooltip {
-  background-color: #ff0000;
+  background-color: #ff3e3e;
+}
+
+@media (max-width: 768px) {
+  .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 }

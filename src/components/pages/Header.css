@@ -15,9 +15,18 @@
     padding: 20px;
 }
 
-.hover-effect span:hover::before {
+.hover-effect a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
 }
 
 .logo-container img::before {
@@ -35,9 +44,9 @@
 
 .logo-container {
     display: inline-block;
-    height: 50px;
+    height: 55px;
     width: 70px;
-    background-color: white;
+    background-color: var(--secundary-color);
     overflow: hidden;
     position: relative;
 }
@@ -50,7 +59,6 @@
 .logo-header {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -144,7 +152,7 @@
     position: relative;
 }
 
-.hover-effect span::before {
+.hover-effect a::before {
     content: '';
     position: absolute;
     bottom: 40%;
@@ -157,7 +165,167 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.hover-effect span:hover::before {
+.hover-effect a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/*
+  Mobile Header
+*/
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  margin-bottom: 25px;
+  z-index: 20;
+}
+
+.mobile-header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.mobile-menu.open {
+  height: 200px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  padding: 15px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.logo-container-mobile img::before {
+  content: '';
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: cyan;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container-mobile {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+.logo-size-mobile {
+  display: inline-block;
+  height: 55px;
+  width: 70px;
+  background-color: var(--secundary-color);
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--secundary-color);
+}
+
+.burger-menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 30;
+  color: var(--secundary-color);
+}
+
+.mobile-menu-light-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(179, 247, 251);
+  background: radial-gradient(circle, rgba(179, 247, 251, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  color: #333;
+  padding: 20px;
+}
+
+.mobile-menu-dark-mode {
+  background: #000000;
+  background: linear-gradient(to bottom right, #000000 47%, #BABABA 94%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  color: #3333339a;
+  padding: 20px;
+}
+
+.mobile-header-top-options {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.mobile-menu-item {
+  padding: 20px;
+  font-size: 1.2rem;
+  color: var(--secundary-color);
+  background-color: rgba(255, 253, 253, 0.315);
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.mobile-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.email-link:hover {
+  color: red;
+  text-decoration: underline;
 }

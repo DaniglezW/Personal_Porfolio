@@ -10,11 +10,10 @@ _______________________________________________________________________________
 DESIGNER
 
 Daniel González
-Hand crafted design & web development
+Software developer
 
 Design tools:
 Figma
-Blender
 
 https://github.com/DaniglezW
 

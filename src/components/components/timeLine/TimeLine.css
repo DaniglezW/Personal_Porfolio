@@ -1,14 +1,21 @@
-.salesianos-text h3, p{
-    display: flex;
-    text-align: start;
+.general-container {
+  margin-bottom: 15%;
 }
 
-.img-timeline {
-    height: auto;
-    width: auto;
-    color: rgb(0, 184, 184);
+.experience-title {
+  display: flex;
+  flex-direction: row;
 }
 
-.test {
-  background-color: var(--detailColor);
+.title-h2 {
+  margin-bottom: 5%;
+  padding-left: 10px;
+  color: var(--secundary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-title {
+    justify-content: center;
+  }
 }

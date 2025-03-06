@@ -4,3 +4,10 @@
     width: 80%;
     text-align: justify;
 }
+
+.title-h2 {
+  margin-bottom: 5%;
+  padding-left: 10px;
+  color: var(--secundary-color);
+  font-weight: bold;
+}

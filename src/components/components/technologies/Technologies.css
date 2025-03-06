@@ -1,0 +1,55 @@
+.title-h2 {
+  margin-bottom: 5%;
+  padding-left: 10px;
+  color: var(--secundary-color);
+  font-weight: bold;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-items: center;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.tech-item.tech-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tech-icon {
+  font-size: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--secundary-color);
+}
+
+.tech-item:hover {
+  transform: scale(1.1);
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+}

@@ -1,0 +1,17 @@
+{
+  "contact": "Contact Me",
+  "experience": "Experience",
+  "experienceLong": "Work Experience",
+  "technologies": "Technologies",
+  "proyects": "Projects",
+  "aboutMe": "About Me",
+  "t1": "Full-stack Developer",
+  "t2": "Intern Student",
+  "t3": "Higher Vocational Training in Multiplatform Application Development",
+  "descriptions": {
+    "initialDesc": "Soy desarrollador de software especializado en aplicaciones web, con interés en crear soluciones eficientes y bien estructuradas. Resido en Tenerife, España, y me apasiona seguir aprendiendo y mejorando mis habilidades cada día.",
+    "c1": "",
+    "c2": "",
+    "c3": ""
+  }
+}

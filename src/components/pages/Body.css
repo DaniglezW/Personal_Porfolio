@@ -1,3 +1,7 @@
+#container {
+  transition: opacity 0.3s ease-in-out;
+}
+
 .body-container {
     width: 100%;
     min-height: 100vh;
@@ -203,6 +207,8 @@
 
 .body-content {
   margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* End Description */
@@ -260,6 +266,12 @@
 
     .category {
       margin: 0;
+    }
+
+    .body-content {
+      margin-top: 10%;
+      margin-left: 0%;
+      margin-right: 0%;
     }
   }
 }

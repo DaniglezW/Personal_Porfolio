@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DarkMode from '../components/darkMode/DarkMode'
+import LanguageSwitcher from '../components/languageSwitcher/LanguageSwitcher'
 
 
 const Header = () => {
@@ -54,22 +55,25 @@ const Header = () => {
             </div>
           </div>
           <div className='mobile-header-top-options'>
-            <DarkMode
-                theme={theme}
-                setTheme={setTheme}
-                selectedTheme={selectedTheme}
-            />
             <button className='btn burger-menu' onClick={() => setMenuOpen(!menuOpen)}>
-              { menuOpen ? <CloseIcon /> : <MenuIcon />}
+              {menuOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
         {menuOpen && (
-          <div className={theme ? 'mobile-menu-dark-mode': 'mobile-menu-light-mode'}>
+          <div className={theme ? 'mobile-menu-dark-mode' : 'mobile-menu-light-mode'}>
             <div className='mobile-menu-item' onClick={() => scrollToSection('proyects')}>Proyects</div>
             <div className='mobile-menu-item' onClick={() => scrollToSection('technologies')}>Technologies</div>
             <div className='mobile-menu-item' onClick={() => scrollToSection('time-line')}>Experience</div>
             <SocialMedia />
+            <div>
+              <DarkMode
+                theme={theme}
+                setTheme={setTheme}
+                selectedTheme={selectedTheme}
+              />
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>
@@ -84,8 +88,8 @@ const Header = () => {
             src={theme ? LogoDarkMode : LogoLightMode}
             className="logo-header"
             alt="logo"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            style={{ cursor: 'pointer' }} 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            style={{ cursor: 'pointer' }}
           />
         </div>
         <div className='parts'>

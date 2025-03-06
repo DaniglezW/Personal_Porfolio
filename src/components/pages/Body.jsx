@@ -11,6 +11,8 @@ import DarkMode from '../components/darkMode/DarkMode';
 import { useEffect, useState } from 'react';
 import Technologies from '../components/technologies/Technologies';
 import Proyects from '../components/proyects/Proyects';
+import LanguageSwitcher from '../components/languageSwitcher/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const Body = () => {
   const StyledCodeIcon = styled(CodeIcon)`
@@ -29,7 +31,9 @@ const Body = () => {
   const selectedTheme = localStorage.getItem('selectedTheme')
   const [theme, setTheme] = useState(selectedTheme === "dark");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     const handleThemeChange = () => {
       setTheme(localStorage.getItem("selectedTheme") === "dark");
@@ -42,13 +46,16 @@ const Body = () => {
   }, []);
 
   return (
-    <div className="body-container">
+    <div id='container' className="body-container">
       <div className='container-dm'>
-        {!isMobile && <DarkMode
-          theme={theme}
-          setTheme={setTheme}
-          selectedTheme={selectedTheme}
-        />}
+        {!isMobile && <>
+          <DarkMode
+            theme={theme}
+            setTheme={setTheme}
+            selectedTheme={selectedTheme}
+          />
+          <LanguageSwitcher />
+        </>}
       </div>
       <div className="title">
         <span className="name">DANIEL GONZÁLEZ</span>
@@ -71,17 +78,19 @@ const Body = () => {
       </div>
       <div className="intro-container">
         <div className="text-section">
-          <p>
-            Soy <span className="highlight">desarrollador de software especializado en aplicaciones web</span>,
-            con interés en crear soluciones eficientes y bien estructuradas.
-            Resido en Tenerife, España, y me apasiona seguir aprendiendo y mejorando mis habilidades cada día.
-          </p>
+          {
+            i18n.language === 'es' ?
+              <p>Soy <span className="highlight">desarrollador de software especializado en aplicaciones web</span>,
+                con interés en crear soluciones eficientes y bien estructuradas.
+                Resido en Tenerife, España, y me apasiona seguir aprendiendo y mejorando mis habilidades cada día.</p> :
+              <p>I am a <span className="highlight">software developer specialized in web applications</span>, with an interest in creating efficient and well-structured solutions. I reside in Tenerife, Spain, and I am passionate about continuing to learn and improve my skills every day.</p>
+          }
         </div>
         <div className="profile-section">
           <img src={theme ? profileBlackImg : profileWhiteImg} alt="Profile" className="profile-picture" />
           <a href="mailto:dani.flex.work@gmail.com" className="contact-button">
             <ForwardToInboxIcon />
-            <span>Contact Me</span>
+            <span>{t("contact")}</span>
           </a>
         </div>
       </div>

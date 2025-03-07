@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './TimeLine.css'
 import CodeIcon from '@mui/icons-material/Code';
-import SalesianosLogo from '../../../assets/descarga.png'
 import Work from '@mui/icons-material/HomeRepairService';
 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'

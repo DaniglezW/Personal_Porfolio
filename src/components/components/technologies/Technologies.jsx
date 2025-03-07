@@ -3,7 +3,7 @@ import './Technologies.css';
 import SourceIcon from '@mui/icons-material/Source';
 import { useTranslation } from 'react-i18next';
 import { FaReact, FaAngular, FaJava, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
-import { SiSpringboot, SiPostgresql, SiTypescript, SiKubernetes, SiPython, SiReactrouter, SiFigma } from "react-icons/si";
+import { SiSpringboot, SiPostgresql, SiTypescript, SiKubernetes, SiPython, SiFigma } from "react-icons/si";
 import { TbBrandReactNative } from 'react-icons/tb';
 const Technologies = () => {
   const { t } = useTranslation();

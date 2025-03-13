@@ -326,6 +326,6 @@ a:hover {
 }
 
 .email-link:hover {
-  color: red;
+  color: rgb(255, 120, 120);
   text-decoration: underline;
 }

@@ -7,12 +7,13 @@ import './Body.css';
 import styled from '@emotion/styled';
 import TimeLine from '../components/timeLine/TimeLine';
 import AboutMe from '../components/aboutMe/AboutMe';
-import DarkMode from '../components/darkMode/DarkMode';
+import DarkMode from '../theme/darkMode/DarkMode';
 import { useEffect, useState } from 'react';
 import Technologies from '../components/technologies/Technologies';
 import Proyects from '../components/proyects/Proyects';
-import LanguageSwitcher from '../components/languageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '../common/LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../theme/ThemeContext';
 
 const Body = () => {
   const StyledCodeIcon = styled(CodeIcon)`
@@ -28,8 +29,7 @@ const Body = () => {
   }
 `;
 
-  const selectedTheme = localStorage.getItem('selectedTheme')
-  const [theme, setTheme] = useState(selectedTheme === "dark");
+  const { theme, setTheme } = useTheme();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const { t, i18n } = useTranslation();
@@ -43,22 +43,25 @@ const Body = () => {
     observer.observe(document, { subtree: true, childList: true });
 
     return () => observer.disconnect();
-  }, []);
+  }, [setTheme]);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div id='container' className="body-container">
       <div className='container-dm'>
         {!isMobile && <>
-          <DarkMode
-            theme={theme}
-            setTheme={setTheme}
-            selectedTheme={selectedTheme}
-          />
+          <DarkMode />
           <LanguageSwitcher />
         </>}
       </div>
       <div className="title">
-        <span className="name">DANIEL GONZÁLEZ</span>
+        <span className="name" onClick={() => scrollToSection('about-me')}>DANIEL GONZÁLEZ</span>
         <div className="developer">
           <div className="category">
             <div className="hover">
@@ -87,7 +90,7 @@ const Body = () => {
           }
         </div>
         <div className="profile-section">
-          <img src={theme ? profileBlackImg : profileWhiteImg} alt="Profile" className="profile-picture" />
+          <img src={theme ? profileBlackImg : profileWhiteImg} alt="Profile" className="profile-picture" onClick={() => scrollToSection('about-me')} />
           <a href="mailto:dani.flex.work@gmail.com" className="contact-button">
             <ForwardToInboxIcon />
             <span>{t("contact")}</span>
@@ -96,14 +99,14 @@ const Body = () => {
       </div>
       <div className="body-content">
         <section id='time-line'>
-          <TimeLine />
+          <TimeLine theme={theme} setTheme={setTheme}/>
         </section>
         <section id='technologies'>
           <Technologies />
         </section>
-        <section id='proyects'>
+        {/* <section id='proyects'>
           <Proyects />
-        </section>
+        </section> */}
         <section id='about-me'>
           <AboutMe />
         </section>

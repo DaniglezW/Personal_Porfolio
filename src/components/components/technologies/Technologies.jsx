@@ -3,18 +3,23 @@ import './Technologies.css';
 import SourceIcon from '@mui/icons-material/Source';
 import { useTranslation } from 'react-i18next';
 import { FaReact, FaAngular, FaJava, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
-import { SiSpringboot, SiPostgresql, SiTypescript, SiKubernetes, SiPython, SiFigma } from "react-icons/si";
+import { SiSpringboot, SiPostgresql, SiTypescript, SiKubernetes, SiPython, SiFigma, SiMysql, SiOracle, SiDocker, SiJsonwebtokens, SiApachemaven } from "react-icons/si";
 import { TbBrandReactNative } from 'react-icons/tb';
+
 const Technologies = () => {
   const { t } = useTranslation();
 
   const techs = [
-    { name: "React", icon: <FaReact />, color: "#61DAFB" },
     { name: "Angular", icon: <FaAngular />, color: "#DD0031" },
-    { name: "Java", icon: <FaJava />, color: "#007396" },
     { name: "Spring Boot", icon: <SiSpringboot />, color: "#6DB33F" },
+    { name: "Java", icon: <FaJava />, color: "#007396" },
+    { name: "React", icon: <FaReact />, color: "#61DAFB" },
     { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
     { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
+    { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+    { name: "Oracle", icon: <SiOracle />, color: "#F80000" },
+    { name: "SQL", icon: <FaDatabase />, color: "#DB4437" },
+    { name: "Maven", icon: <SiApachemaven />, color: "#C71A36" },
     { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
     { name: "JavaScript", icon: <FaJs />, color: "#F7DF1E" },
     { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
@@ -22,9 +27,10 @@ const Technologies = () => {
     { name: "Kubernetes", icon: <SiKubernetes />, color: "#326CE5" },
     { name: "Python", icon: <SiPython />, color: "#3776AB" },
     { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
-    { name: "SQL", icon: <FaDatabase />, color: "#DB4437" },
     { name: "Figma", icon: <SiFigma />, color: "#F24E1E" },
     { name: "React Native", icon: <TbBrandReactNative />, color: "#61DAFB" },
+    { name: "Docker", icon: <SiDocker />, color: "#2496ED" },
+    { name: "JWT", icon: <SiJsonwebtokens />, color: "#494949" },
   ];
 
   const techRefs = useRef([]);
@@ -53,7 +59,7 @@ const Technologies = () => {
     <div>
       <div className="experience-title">
         <SourceIcon fontSize="large" sx={{ color: "var(--secundary-color)" }} />
-        <h2>{t("technologies")}</h2>
+        <h2 className='title-h2'>{t("technologies")}</h2>
       </div>
       <div className="tech-grid">
         {techs.map((tech, index) => (

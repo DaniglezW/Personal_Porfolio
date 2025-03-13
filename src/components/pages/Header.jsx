@@ -8,8 +8,8 @@ import SocialMedia from '../components/socialMedia/SocialMedia'
 import { useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import DarkMode from '../components/darkMode/DarkMode'
-import LanguageSwitcher from '../components/languageSwitcher/LanguageSwitcher'
+import DarkMode from '../theme/darkMode/DarkMode'
+import LanguageSwitcher from '../common/LanguageSwitcher'
 
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
         </div>
         {menuOpen && (
           <div className={theme ? 'mobile-menu-dark-mode' : 'mobile-menu-light-mode'}>
-            <div className='mobile-menu-item' onClick={() => scrollToSection('proyects')}>Proyects</div>
+            <div className='mobile-menu-item' onClick={() => scrollToSection('about-me')}>About me</div>
             <div className='mobile-menu-item' onClick={() => scrollToSection('technologies')}>Technologies</div>
             <div className='mobile-menu-item' onClick={() => scrollToSection('time-line')}>Experience</div>
             <SocialMedia />
@@ -94,7 +94,7 @@ const Header = () => {
         </div>
         <div className='parts'>
           <div className='rotated-parts'>
-            <div className='hover-effect'><a href="#proyects">Proyects</a></div>
+            <div className='hover-effect'><a href="#about-me">About&nbsp;&nbsp;me</a></div>
             <div className='hover-effect'><a href="#technologies">Technologies</a></div>
             <div className='hover-effect'><a href="#time-line">Experience</a></div>
           </div>

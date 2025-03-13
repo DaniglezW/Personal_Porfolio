@@ -2,6 +2,10 @@
   margin-bottom: 15%;
 }
 
+.vertical-timeline-element-date {
+  text-align: center !important;
+}
+
 .experience-title {
   display: flex;
   flex-direction: row;
@@ -12,6 +16,67 @@
   padding-left: 10px;
   color: var(--secundary-color);
   font-weight: bold;
+}
+
+.box-container {
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+}
+
+.date {
+  color: var(--secundary-color);
+}
+
+.vertical-timeline-element-icon .bounce-in {
+  border-color: black !important;
+  background-color: #000 !important;
+}
+
+/* Card */
+
+.timeline-arrow {
+  border-right: 7px solid var(--secundary-color) !important;
+}
+
+.timeline-icon {
+  background: red !important;
+  color: #000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.timeline-icon-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: var(--secundary-color);
+}
+
+.salesianos-text h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.salesianos-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Final Card CSS*/
+
+@keyframes neonAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 @media (max-width: 768px) {

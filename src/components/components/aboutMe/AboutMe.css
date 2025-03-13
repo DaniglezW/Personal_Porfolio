@@ -1,13 +1,75 @@
 .container-about-me {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    text-align: justify;
+  width: 100%;
+  text-align: justify;
+  align-items: center;
+}
+
+.experience-title {
+  display: flex;
 }
 
 .title-h2 {
-  margin-bottom: 5%;
-  padding-left: 10px;
   color: var(--secundary-color);
   font-weight: bold;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  gap: 20px;
+}
+
+.text-about-me {
+  max-width: 50%;
+}
+
+.text-about-me h2 {
+  color: var(--secundary-color);
+  margin-bottom: 10px;
+}
+
+.text-about-me p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--secundary-color);
+}
+
+.img-about-me img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 10px solid var(--secundary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: rotate(5deg);
+}
+
+.img-about-me img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  .text-about-me {
+      max-width: 100%;
+      width: 90%;
+  }
+
+  .img-about-me img {
+      width: 150px;
+      height: 150px;
+  }
+  
+  .experience-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 }

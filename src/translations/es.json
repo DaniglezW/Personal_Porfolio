@@ -8,9 +8,35 @@
   "t1": "Full-stack Developer",
   "t2": "Estudiante en Prácticas",
   "t3": "Grado Superior Desarrollo de Aplicaciones Multiplataforma",
+  "learnMore": "Saber más...",
+  "showLess": "Mostrar menos",
+  "dates": {
+    "date1": "Julio 2023 - Actualmente",
+    "date2": "Marzo 2021 - Mayo 2023",
+    "date3": "September 2021 - May 2023"
+  },
   "descriptions": {
-    "c1": "",
-    "c2": "",
-    "c3": ""
+    "d1": "Puesto de Full-Stack Developer en Atos/Eviden, participando en el desarrollo y mantenimiento de aplicaciones empresariales. He trabajado en la creación de microservicios con Spring Boot en el backend y en el desarrollo de interfaces con Angular y React en el frontend. Además, he implementado APIs REST y utilizado herramientas como Docker y Kubernetes para la gestión y orquestación de servicios, aplicando buenas prácticas de calidad de código y seguridad en las aplicaciones.",
+    "d2": "Realicé un bootcamp donde trabajé en proyectos Full-Stack con Angular y Spring Boot, utilizando JPA para la gestión de bases de datos. Participé en la integración de APIs, validación de datos y comunicación entre frontend y backend. Además, adquirí experiencia en trabajo en equipo, depuración, resolución de problemas y en todo el ciclo de desarrollo de software, aplicando metodologías ágiles.",
+    "d3": "Estudios en Desarrollo de Aplicaciones Multiplataforma, con formación en Java, JavaScript, React y Spring Boot, además de bases de datos SQL y JPA. Aprendí sobre diseño y estructuración de bases de datos, desarrollo de interfaces responsivas y creación de aplicaciones para escritorio, web y móviles. También adquirí conocimientos en arquitectura de software, patrones de diseño y metodologías ágiles."
+  },
+  "KEYWORDS": {
+    "JPA": "JPA",
+    "JAVA": "Java",
+    "REACT": "React",
+    "SCRIPT": "Script",
+    "DOCKER": "Docker",
+    "ANGULAR": "Angular",
+    "KUBERNETES": "Kubernetes",
+    "SPRING_BOOT": "Spring Boot",
+    "ANGULAR_REACT": "Angular y React",
+    "FULL_STACK": "Full-Stack Developer",
+    "TRABAJO_EN_EQUIPO": "trabajo en equipo",
+    "BASES_DE_DATOS_SQL": "bases de datos SQL",
+    "PATRONES_DE_DISENO": "patrones de diseño",
+    "METODOLOGIAS_AGILES": "metodologías ágiles",
+    "ARQUITECTURA_SOFTWARE": "arquitectura de software",
+    "MICROERVICIOS_SPRING_BOOT": "microservicios con Spring Boot",
+    "MANTENIMIENTO_APLICACIONES": "mantenimiento de aplicaciones empresariales"
   }
 }

@@ -27,9 +27,9 @@
   color: var(--secundary-color);
 }
 
-.vertical-timeline-element-icon .bounce-in {
-  border-color: black !important;
-  background-color: #000 !important;
+.experience-title-timeline {
+  display: flex;
+  margin-top: 60px;
 }
 
 /* Card */
@@ -58,7 +58,7 @@
   color: var(--secundary-color);
 }
 
-.salesianos-text h3 {
+.salesianos-text h2 {
   margin: 0;
   font-size: 1.4rem;
 }
@@ -68,19 +68,37 @@
   line-height: 1.5;
 }
 
-/* Final Card CSS*/
-
-@keyframes neonAnimation {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+.description-container {
+  text-align: start;
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.expand-button {
+  background-color: cyan;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.expand-button:hover {
+  background-color: rgb(0, 200, 200);
+}
+
+/* Final Card CSS*/
+
 @media (max-width: 768px) {
-  .experience-title {
+  .experience-title-timeline {
     justify-content: center;
   }
 }

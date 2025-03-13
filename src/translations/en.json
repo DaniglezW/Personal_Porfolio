@@ -7,11 +7,36 @@
   "aboutMe": "About Me",
   "t1": "Full-stack Developer",
   "t2": "Intern Student",
-  "t3": "Higher Vocational Training in Multiplatform Application Development",
+  "t3": "Higher Education in Multiplatform Application Development",
+  "learnMore": "Learn more...",
+  "showLess": "Show less",
+  "dates": {
+    "date1": "July 2023 - Present",
+    "date2": "March 2021 - May 2023",
+    "date3": "September 2021 - May 2023"
+  },
   "descriptions": {
-    "initialDesc": "Soy desarrollador de software especializado en aplicaciones web, con interés en crear soluciones eficientes y bien estructuradas. Resido en Tenerife, España, y me apasiona seguir aprendiendo y mejorando mis habilidades cada día.",
-    "c1": "",
-    "c2": "",
-    "c3": ""
+    "d1": "Full-stack Developer position at Atos/Eviden, participating in the development and maintenance of enterprise applications. I have worked on creating microservices with Spring Boot in the backend and developing interfaces with Angular and React in the frontend. Additionally, I have implemented REST APIs and used tools like Docker and Kubernetes for service management and orchestration, applying best practices for code quality and security in applications.",
+    "d2": "I completed a bootcamp where I worked on Full-stack projects with Angular and Spring Boot, using JPA for database management. I participated in the integration of APIs, data validation, and communication between frontend and backend. I also gained experience in teamwork, debugging, problem-solving, and the entire software development cycle, applying agile methodologies.",
+    "d3": "Studies in Multiplatform Application Development, with training in Java, JavaScript, React, and Spring Boot, as well as SQL databases and JPA. I learned about database design and structure, development of responsive interfaces, and the creation of applications for desktop, web, and mobile. I also gained knowledge in software architecture, design patterns, and agile methodologies."
+  },
+  "KEYWORDS": {
+    "JPA": "JPA",
+    "JAVA": "Java",
+    "REACT": "React",
+    "SCRIPT": "Script",
+    "DOCKER": "Docker",
+    "ANGULAR": "Angular",
+    "KUBERNETES": "Kubernetes",
+    "SPRING_BOOT": "Spring Boot",
+    "ANGULAR_REACT": "Angular y React",
+    "FULL_STACK": "Full-Stack Developer",
+    "TRABAJO_EN_EQUIPO": "trabajo en equipo",
+    "BASES_DE_DATOS_SQL": "bases de datos SQL",
+    "PATRONES_DE_DISENO": "patrones de diseño",
+    "METODOLOGIAS_AGILES": "metodologías ágiles",
+    "ARQUITECTURA_SOFTWARE": "arquitectura de software",
+    "MICROERVICIOS_SPRING_BOOT": "microservicios con Spring Boot",
+    "MANTENIMIENTO_APLICACIONES": "mantenimiento de aplicaciones empresariales"
   }
 }

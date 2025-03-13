@@ -57,7 +57,7 @@ const Technologies = () => {
 
   return (
     <div>
-      <div className="experience-title">
+      <div className="experience-title-technologies">
         <SourceIcon fontSize="large" sx={{ color: "var(--secundary-color)" }} />
         <h2 className='title-h2'>{t("technologies")}</h2>
       </div>

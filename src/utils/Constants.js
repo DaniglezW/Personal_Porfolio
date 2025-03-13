@@ -4,9 +4,10 @@ export class Constants {
   static LOGO = '../assets/logo.png'
   static NAME_APP = 'Portfolio de Daniel GL';
   static LINKS = {
-    instagram: "",
-    linkedin: "https://www.linkedin.com/in/daniel-gonz%C3%A1lez-lorenzo-346025272/",
+    atos: "https://atos.net/es/espana",
     github: "https://github.com/DaniglezW",
+    salesianos: "https://lacuesta.salesianos.edu/colegio/ciclos-formativos/",
+    linkedin: "https://www.linkedin.com/in/daniel-gonz%C3%A1lez-lorenzo-346025272/",
   }
   static BANNER = `
   ______        _      ____  _____ _____ ________ _____     

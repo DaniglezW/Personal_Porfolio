@@ -10,26 +10,36 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DarkMode from '../theme/darkMode/DarkMode'
 import LanguageSwitcher from '../common/LanguageSwitcher'
+import { useTheme } from '../theme/ThemeContext'
 
 
 const Header = () => {
 
-  const selectedTheme = localStorage.getItem('selectedTheme');
-
-  const [theme, setTheme] = useState(selectedTheme === "dark");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const { theme, setTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleThemeChange = () => {
       setTheme(localStorage.getItem("selectedTheme") === "dark");
     };
-
+  
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+  
     const observer = new MutationObserver(handleThemeChange);
     observer.observe(document, { subtree: true, childList: true });
-
-    return () => observer.disconnect();
-  }, []);
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setTheme]);
+  
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -41,7 +51,7 @@ const Header = () => {
 
   if (isMobile) {
     return (
-      <div className='mobile-header'>
+      <div className={`mobile-header ${scrolled ? 'scrolled' : ''}`}>
         <div className='mobile-header-top'>
           <div className='logo-container-mobile'>
             <div className='logo-size-mobile'>
@@ -67,11 +77,7 @@ const Header = () => {
             <div className='mobile-menu-item' onClick={() => scrollToSection('time-line')}>Experience</div>
             <SocialMedia />
             <div>
-              <DarkMode
-                theme={theme}
-                setTheme={setTheme}
-                selectedTheme={selectedTheme}
-              />
+              <DarkMode/>
               <LanguageSwitcher />
             </div>
           </div>

@@ -181,9 +181,16 @@ a:hover {
   padding: 15px;
   background-color: transparent;
   color: white;
-  position: relative;
-  margin-bottom: 25px;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
   z-index: 20;
+}
+
+.mobile-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid white;
 }
 
 .mobile-header-top {

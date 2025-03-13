@@ -53,3 +53,14 @@
 .tech-item:hover .tech-name {
   opacity: 1;
 }
+
+.experience-title-technologies {
+  display: flex;
+  margin-top: 200px;
+}
+
+@media (max-width: 768px) {
+  .experience-title-technologies {
+    justify-content: center;
+  }
+}

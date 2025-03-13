@@ -33,7 +33,7 @@ const AboutMe = () => {
                   como desarrollador.
                 </p>
                 <p>
-                  También disfruto trabajar en equipo, compartir conocimientos y colaborar con
+                  También disfruto <span className="highlight">trabajar en equipo</span>, compartir conocimientos y colaborar con
                   otros profesionales para crear soluciones de calidad. Creo que un buen ambiente
                   de trabajo y la comunicación son claves para lograr grandes resultados.
                 </p>
@@ -51,7 +51,7 @@ const AboutMe = () => {
                   I enjoy optimizing code, applying best practices, and facing new challenges to continue growing as a developer.
                 </p>
                 <p>
-                  I also enjoy working in teams, sharing knowledge, and collaborating with other professionals to create high-quality solutions.
+                  I also enjoy <span className="highlight">working in teams</span>, sharing knowledge, and collaborating with other professionals to create high-quality solutions.
                   I believe that a good work environment and communication are key to achieving great results.
                 </p>
               </>

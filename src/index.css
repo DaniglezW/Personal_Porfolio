@@ -15,6 +15,7 @@ html, body {
   height: 100dvh;
   overscroll-behavior: none;
   scroll-behavior: smooth;
+  background-color: var(--primary-color);
 }
 
 code {

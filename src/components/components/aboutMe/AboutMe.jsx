@@ -2,21 +2,21 @@ import React from 'react'
 import './AboutMe.css'
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import AboutMeImg from '../../../assets/AboutMe.jpg'
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const AboutMe = () => {
-  const { t, i18n } = useTranslation();
+  const { language, resources } = useLanguage();
 
   return (
     <div className='container-about-me'>
       <div className='experience-title'>
         <PersonOutlineIcon fontSize="large" sx={{ color: 'var(--secundary-color)' }} />
-        <h2 className='title-h2'>{t("aboutMe")}</h2>
+        <h2 className='title-h2'>{resources[language]?.translation?.aboutMe}</h2>
       </div>
       <div className="about-content">
         <div className="text-about-me">
           {
-            i18n.language === 'es'
+            language === 'es'
               ? <>
                 <h2>¡Hola! 👋</h2>
                 <p>

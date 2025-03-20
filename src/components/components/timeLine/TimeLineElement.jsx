@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const highlightText = (text, keywords) => {
   if (!keywords || !Array.isArray(keywords) || keywords.length === 0) return text;
@@ -16,13 +16,13 @@ const highlightText = (text, keywords) => {
 }
 
 const TimelineElement = ({ title, description, date, iconUrl, iconOnClick, keywords }) => {
-  const { t } = useTranslation();
+  const { language, resources } = useLanguage();
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!expanded);
 
   const previewLength = 150;
   const isLong = description.length > previewLength;
-  const translatedKeywords = keywords.map(keyword => t(`KEYWORDS.${keyword}`));
+  const translatedKeywords = keywords.map(keyword => resources[language]?.translation?.KEYWORDS?.[keyword] || keyword);
   const previewText = isLong ? description.slice(0, previewLength) + "..." : description;
 
   return (
@@ -44,7 +44,7 @@ const TimelineElement = ({ title, description, date, iconUrl, iconOnClick, keywo
         {isLong && (
           <div className="button-container">
             <button onClick={toggleExpanded} className="expand-button">
-              {expanded ? t("showLess") : t("learnMore")}
+              {expanded ? resources[language]?.translation?.showLess : resources[language]?.translation?.learnMore}
             </button>
           </div>
         )}

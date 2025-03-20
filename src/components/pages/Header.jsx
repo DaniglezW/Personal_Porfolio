@@ -9,8 +9,8 @@ import { useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DarkMode from '../theme/darkMode/DarkMode'
-import LanguageSwitcher from '../common/LanguageSwitcher'
-import { useTheme } from '../theme/ThemeContext'
+import LanguageSwitcher from '../../common/LanguageSwitcher';
+import { useTheme } from '../theme/ThemeContext';
 
 
 const Header = () => {

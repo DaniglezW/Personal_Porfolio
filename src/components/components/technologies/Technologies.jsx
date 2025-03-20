@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react'
 import './Technologies.css';
 import SourceIcon from '@mui/icons-material/Source';
-import { useTranslation } from 'react-i18next';
 import { FaReact, FaAngular, FaJava, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiTypescript, SiKubernetes, SiPython, SiFigma, SiMysql, SiOracle, SiDocker, SiJsonwebtokens, SiApachemaven } from "react-icons/si";
 import { TbBrandReactNative } from 'react-icons/tb';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Technologies = () => {
-  const { t } = useTranslation();
+  const { language, resources } = useLanguage();
 
   const techs = [
     { name: "Angular", icon: <FaAngular />, color: "#DD0031" },
@@ -59,7 +59,7 @@ const Technologies = () => {
     <div>
       <div className="experience-title-technologies">
         <SourceIcon fontSize="large" sx={{ color: "var(--secundary-color)" }} />
-        <h2 className='title-h2'>{t("technologies")}</h2>
+        <h2 className='title-h2'>{resources[language]?.translation?.technologies}</h2>
       </div>
       <div className="tech-grid">
         {techs.map((tech, index) => (

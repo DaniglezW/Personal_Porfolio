@@ -11,9 +11,9 @@ import DarkMode from '../theme/darkMode/DarkMode';
 import { useEffect, useState } from 'react';
 import Technologies from '../components/technologies/Technologies';
 import Proyects from '../components/proyects/Proyects';
-import LanguageSwitcher from '../common/LanguageSwitcher';
-import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../../common/LanguageSwitcher';
 import { useTheme } from '../theme/ThemeContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Body = () => {
   const StyledCodeIcon = styled(CodeIcon)`
@@ -32,7 +32,7 @@ const Body = () => {
   const { theme, setTheme } = useTheme();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const { t, i18n } = useTranslation();
+  const { language, resources } = useLanguage();
 
   useEffect(() => {
     const handleThemeChange = () => {
@@ -82,7 +82,7 @@ const Body = () => {
       <div className="intro-container">
         <div className="text-section">
           {
-            i18n.language === 'es' ?
+            language === 'es' ?
               <p>Soy <span className="highlight">desarrollador de software especializado en aplicaciones web</span>,
                 con interés en crear soluciones eficientes y bien estructuradas.
                 Resido en Tenerife, España, y me apasiona seguir aprendiendo y mejorando mis habilidades cada día.</p> :
@@ -93,7 +93,7 @@ const Body = () => {
           <img src={theme ? profileBlackImg : profileWhiteImg} alt="Profile" className="profile-picture" onClick={() => scrollToSection('about-me')} />
           <a href="mailto:dani.flex.work@gmail.com" className="contact-button">
             <ForwardToInboxIcon />
-            <span>{t("contact")}</span>
+            <span>{resources[language]?.translation?.contact}</span>
           </a>
         </div>
       </div>

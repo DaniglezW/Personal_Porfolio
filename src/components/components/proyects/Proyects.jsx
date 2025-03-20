@@ -1,16 +1,16 @@
 import React from 'react'
 import './Proyects.css'
-import { useTranslation } from 'react-i18next';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 const Proyects = () => {
-  const { t } = useTranslation();
+  const { language, resources } = useLanguage();
 
   return (
     <div>
       <div className='experience-title'>
         <AssignmentIcon fontSize="large" sx={{ color: 'var(--secundary-color)' }} />
-        <h2 className='title-h2'>{t("proyects")}</h2>
+        <h2 className='title-h2'>{resources[language]?.translation?.proyects}</h2>
       </div>
     </div>
   )

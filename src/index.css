@@ -30,6 +30,7 @@ code {
   --background-gradient: radial-gradient(circle, rgba(166,255,253,1) 0%, rgba(255,255,255,1) 72%);
   --hover-dm-btn-color: #1a1a1a37;
   --shadow-time-line: #000;
+  --opaticity-header: rgba(255, 255, 255, 0.8);
 }
 
 [data-theme="dark"] {
@@ -39,4 +40,5 @@ code {
   --background-gradient: radial-gradient(circle, rgba(49,49,49,1) 0%, rgba(0,0,0,1) 68%);
   --hover-dm-btn-color: #fdd83137;
   --shadow-time-line: cyan;
+  --opaticity-header: rgba(0, 0, 0, 0.8);
 }

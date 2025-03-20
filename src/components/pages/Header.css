@@ -189,8 +189,8 @@ a:hover {
 }
 
 .mobile-header.scrolled {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 3px solid white;
+  background-color: var(--opaticity-header);
+  border-bottom: 3px solid var(--secundary-color);
 }
 
 .mobile-header-top {

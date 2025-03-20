@@ -5,7 +5,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import { useTranslation } from 'react-i18next';
 
 const highlightText = (text, keywords) => {
-  console.log(keywords);
   if (!keywords || !Array.isArray(keywords) || keywords.length === 0) return text;
   const regex = new RegExp(`(${keywords.join('|')})`, 'gi');
 
